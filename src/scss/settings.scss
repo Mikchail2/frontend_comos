@@ -1,0 +1,90 @@
+@import 'breakpoint';
+@import 'mixins';
+
+//=======================
+// Точки для media-queries
+//=======================
+$media1600: 1600px;
+$media1300: 1300px;
+$media1350: 1350px;
+$media1200: 1200px;
+$media1024: 1024px;
+$media960: 960px;
+$media900: 900px;
+$media800: 800px;
+$media780: 780px;
+$media768: 768px;
+$media640: 640px;
+$media600: 600px;
+$media560: 560px;
+$media480: 480px;
+$media420: 420px;
+$media400: 400px;
+$media375: 375px;
+// =================
+// бургер
+
+$menu_burger_color: $white;
+$menu-burger-active-color: #FF7010;
+
+$menu_burger_width: 30px;
+$menu_burger_line_height: 2px;
+$menu_burger_line_space: 10px;
+
+
+
+///
+body {
+  position: relative;
+  background-color: #80777e;
+  overflow-x: hidden;
+    &.main-menu-opened {
+        overflow: hidden;
+    }
+}
+
+main {
+  height: 700px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: 16px/20px 'Stem-Medium', sans-serif;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1400px;
+  background-clip: content-box;
+  box-sizing: border-box;
+  padding-left: $padding_container;
+  padding-right: $padding_container;
+  @include media_interval(0,$media768){
+    max-width: 1200px;
+  }
+  @include media_interval(0, $media1350) {
+    padding-left: $padding_container_table;
+    padding-right: $padding_container_table;
+  }
+   @include media_interval(0, $media640) {
+    padding-left: $padding_container_mobile;
+    padding-right: $padding_container_mobile;
+  }
+  //@include media_interval(0, $media1300) {
+  //  max-width: 1100px;
+  //}
+  //@include media_interval($media1300, 0) {
+  //  max-width: 1400px;
+  //}
+}

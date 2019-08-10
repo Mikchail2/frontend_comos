@@ -1,0 +1,285 @@
+@import "mixins";
+
+.contacts-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  flex-direction: row;
+  color: $white;
+  @include media_interval(0, $media1300) {
+    flex-direction: column;
+  }
+
+  &__button {
+    margin-right: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    @include font-size(14px, 18px);
+    @include media_interval(0, $media1300) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__phone {
+    font-weight: bold;
+    @include font-size(18px, 18px);
+  }
+}
+
+.header {
+  z-index: 99;
+  margin: 0 auto;
+  background-clip: content-box;
+  box-sizing: border-box;
+  top: 0;
+  width: 100%;
+  position: absolute;
+  padding: 30px $padding_container;
+  color: $white;
+  display: flex;
+
+  @include media_interval(0, $media1350) {
+    flex-wrap: wrap;
+    padding-left: $padding_container_table;
+    padding-right: $padding_container_table;
+  }
+  @include media_interval(0, $media640) {
+    padding-left: $padding_container_mobile;
+    padding-right: $padding_container_mobile;
+  }
+
+  .container {
+
+  }
+
+  &__logo {
+    margin-right: 15px;
+  }
+
+  &__contacts {
+
+    @include media_interval(0, $media960) {
+      margin-left: auto;
+      margin-right: 20px;
+      flex-direction: row;
+      display: none;
+    }
+    //@include media_interval(0,$media560){
+    //  flex-direction: column;
+    //}
+    //@include media_interval(0,$media480){
+    //  display: none;
+    //}
+
+  }
+
+  &__contacts-button {
+    //margin-right: 28px;
+    //font-weight: bold;
+    //text-transform: uppercase;
+    //@include font-size(14px, 18px);
+  }
+
+  &__contacts-phone {
+  }
+
+  .menu-header {
+    margin-left: auto;
+    margin-right: 37px;
+    @include media_interval(0, $media960) {
+      display: none;
+    }
+  }
+}
+
+.footer {
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: $white;
+  text-transform: uppercase;
+  padding: 20px $padding_container 110px;
+  display: flex;
+
+  @include media_interval(0, $media1350) {
+    flex-wrap: wrap;
+    padding-left: $padding_container_table;
+    padding-right: $padding_container_table;
+  }
+  @include media_interval(0, $media640) {
+    padding-left: $padding_container_mobile;
+    padding-right: $padding_container_mobile;
+  }
+
+  .container {
+    display: flex;
+    @include media_interval(0, $media1350) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__logo {
+    margin-right: 15px;
+  }
+
+  &__policy {
+    font-weight: bold;
+    margin-right: 37px;
+    text-transform: uppercase;
+    @include font-size(14px, 18px)
+  }
+
+  &__policy-button {
+    @include font-size(14px, 18px)
+  }
+
+  &__policy-phone {
+    @include font-size(14px, 18px)
+  }
+
+  &__contacts {
+
+  }
+
+  &__contacts-button {
+
+
+  }
+
+
+  .menu-footer {
+    margin-left: auto;
+    margin-right: 76px;
+
+    &__item {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+.main-menu {
+  display: flex;
+  @include media_interval(0, $media1350) {
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-right: 46px;
+    text-transform: uppercase;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    a {
+      @include font-size(14px, 18px);
+      color: $white;
+
+      &:hover {
+        color: darken($white, 10%);
+      }
+    }
+  }
+}
+
+
+.mobile-menu {
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  left: -100%;
+  top: 0;
+  //width: 600px;
+  max-width: 100%;
+  //height: 768px;
+  height: 100vh;
+  z-index: 50;
+  text-align: center;
+  //align-items: center;
+  padding-top: 80px;
+  background: $black;
+  box-sizing: border-box;
+  transition: left 0.7s;
+  @include media_interval($media960, 0) {
+    display: none;
+  }
+
+  .scrollable {
+    padding-right: 20px; // для скрытия скроллбара
+    overflow: hidden;
+    max-height: 100%;
+    flex: 0 0 100%;
+
+    .contacts-block {
+      &__button {
+        margin-right: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
+        @include font-size(24px, 24px);
+        @include media_interval(0, $media1300) {
+          margin-bottom: 5px;
+        }
+        @include media_interval(0, $media560) {
+          @include font-size(18px, 24px);
+        }
+      }
+
+      &__phone {
+        font-weight: bold;
+        @include font-size(24px, 24px);
+        @include media_interval(0, $media560) {
+          @include font-size(18px, 24px);
+        }
+      }
+    }
+
+    .scrollable-content {
+      padding-left: 80px;
+      padding-right: 100px;
+      //padding: 58px 30px 30px 30px;
+      box-sizing: border-box;
+      text-align: left;
+      @include media_interval(0, $media560) {
+        padding-left: 30px;
+        padding-right: 40px;
+      }
+
+      > ul {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  li {
+    margin: 20px 0;
+
+    &:nth-of-type(1) {
+      margin-top: 0;
+    }
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 60px;
+    }
+
+    a {
+      display: inline-block;
+      vertical-align: top;
+      color: $white;
+      @include fontmobil_menu();
+
+      &:hover {
+        color: rgba($white, 0.4);
+      }
+    }
+
+    &.active a {
+      color: rgba($white, 0.4);
+    }
+  }
+
+  @at-root .main-menu-opened & {
+    left: 0;
+  }
+}

@@ -1,0 +1,23 @@
+include example-code
+
+mixin menu(list,clsName)
+
+	ul(class="main-menu menu" + clsName)
+		each item in list
+			li(class="main-menu__item menu" + clsName+"__item")
+				a(href= item.url)= item.title
+
+
+mixin menu-mobil(list)
+
+		nav
+			ul(class="mobile-menu")
+				.scrollable
+					.scrollable-content
+						each item in list
+							li(class="menu-mobil__item")
+								a(href= item.url)= item.title
+
+						.contacts-block
+							.contacts-block__button contact earth
+							.contacts-block__phone +1 234 567-89-00

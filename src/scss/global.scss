@@ -1,0 +1,39 @@
+//@import "fonts"; - используем внешние шрифты
+@import "settings";
+@import "layout";
+@import "fonts/stem/stylesheet.css";
+@import "menu";
+@import "burger";
+@import "hero";
+@import "button";
+
+
+.title__h1 {
+  @include fontsize_h1();
+
+}
+
+
+.title__h1 {
+  @include fontsize_h1();
+
+}
+
+.title__h2 {
+  color: $white;
+  text-transform: uppercase;
+  @include fontsize_h2();
+
+}
+
+.title__h3 {
+  color: $yellow;
+  text-transform: uppercase;
+  @include fontsize_h3();
+
+}
+
+.description {
+  color: $white;
+  @include fontsize_default;
+}

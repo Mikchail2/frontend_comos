@@ -1,0 +1,107 @@
+//=======================
+// Точки для media-queries
+//=======================
+$media1600: 1600px;
+$media1300: 1300px;
+$media1200: 1200px;
+$media1024: 1024px;
+$media900: 900px;
+$media800: 800px;
+$media780: 780px;
+$media768: 768px;
+$media640: 640px;
+$media600: 600px;
+$media560: 560px;
+$media480: 480px;
+$media420: 420px;
+$media400: 400px;
+$media375: 375px;
+
+
+//=======================
+// Сетка
+//=======================
+$cols_wide: 12;
+$cols_desktop: 12;
+$cols_tablet: 12;
+$cols_mobile: 8;
+
+// Максимальная ширина сетки
+$grid_max_width: 1400px;
+//$grid_max_width: none;
+
+// Боковые границы каждого столбца
+$grid_column_gap: 10px;
+
+// Боковые границы сетки
+$grid_paddings: (
+    ($media1200, 0): 100px,
+    //($media1200, 0): 36px,
+    ($media1024, $media1200): 50px,
+    //($media1024, $media1200): 26px,
+    ($media768, $media1024): 40px,
+    ($media640, $media768): 24px,
+    (0, $media640): 10px,
+);
+
+// Боковые границы сетки с прибавлением границы столбца
+$grid_full_paddings: ();
+@each $key, $value in $grid_paddings {
+  $grid_full_paddings: map-merge($grid_full_paddings, (
+    $key: $value + $grid_column_gap
+  ))
+}
+
+
+//=======================
+// Sprite
+//=======================
+$sprite_url: url(/static/img/sprite.svg);
+$sprite_width: 256px;
+$sprite_height: 302px;
+
+
+//=======================
+// Цвета
+//=======================
+$white: #FFFFFF;
+$mercury: #E5E5E5;
+$blockquote: #F2F2F2;
+$black: #000000;
+$code-gray: #181818;
+$text_color: #2C3035;
+$mine-shaft: #333333;
+$scorpion: #5F5F5F;
+$plank: #383838;
+$blaze-orange: #FF6B00;
+$lima: #76BC21;
+$border-date: #535353;
+$sunset-orange: #F8443E;
+
+//=======================
+// Меню
+//=======================
+$menu_burger_color: $white;
+$menu-burger-active-color: $blaze-orange;
+
+$menu_burger_width: 30px;
+$menu_burger_line_height: 2px;
+$menu_burger_line_space: 10px;
+
+// интервал показа мобильного меню
+$media_mobile: $media768;
+
+
+//=======================
+// Формы
+//=======================
+
+// вертикальное расстояние между полями
+$field_space: 20px;
+
+
+$header-grid-map: (
+  ($media768, 0): 40px,
+  ($media480, $media768): 30px,
+  (0, $media480): 20px
+)

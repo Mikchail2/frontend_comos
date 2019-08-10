@@ -1,0 +1,77 @@
+@import 'mixins';
+@import 'mixinsall';
+
+.menu-box {
+  @include media_interval(0, $media960) {
+    margin-left: auto;
+  }
+  @include media_interval(0, $media480) {
+
+  }
+}
+
+.mobile-menu-button {
+  display: inline-block;
+  position: relative;
+  z-index: 60;
+  cursor: pointer;
+  text-align: left;
+  vertical-align: middle;
+  user-select: none;
+  @include media_interval($media960, 0) {
+    display: none;
+  }
+
+  .burger {
+    position: relative;
+    width: $menu_burger_width;
+    height: 3 * $menu_burger_line_height + 2 * $menu_burger_line_space;
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: $menu_burger_line_height;
+      background: $menu_burger_color;
+      transition-timing-function: linear;
+    }
+
+    &:before {
+      top: 0;
+      box-shadow: $menu_burger_color 0 ($menu_burger_line_height + $menu_burger_line_space) 0 0;
+      transform: translate3d(0, 0, 0) rotate(0deg);
+      transition-property: transform, box-shadow, top;
+      transition-duration: 0.55s, 0.2s, 0.2s;
+      transition-delay: 0s, 0.45s, 0.45s;
+    }
+
+    &:after {
+      top: 100%;
+      transform: translate3d(0, -100%, 0) rotate(0deg);
+      transition-property: transform, top;
+      transition-duration: 0.55s, 0.2s;
+      transition-delay: 0s, 0.45s;
+    }
+
+    @at-root .main-menu-opened & {
+      &:before {
+        top: 50%;
+        box-shadow: transparent 0 0 0 0;
+        width: 25px;
+        transform: translate3d(0, -50%, 0) rotate(225deg);
+        transition-delay: 0.1s, 0.1s, 0s, 0s;
+
+      }
+
+      &:after {
+        top: 50%;
+        transition-delay: 0.1s, 0s;
+        width: 25px;
+        transform: translate3d(0, -50%, 0) rotate(315deg);
+
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,124 @@
+@import 'mixins';
+
+.hero {
+  position: relative;
+  padding-top: 160px;
+  height: 100%;
+  background-image: url("../images/moon_art.jpg");
+  //background-position-x: 0;
+  //background-position-y: -291px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  @include media_interval(0, $media560) {
+    background-position: -295px 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    height: 240px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__wrapper {
+    @include column(0, 4.5, 7, 7);
+    padding-bottom: 256px;
+@include media_interval(0, $media640) {
+   padding-bottom: 90px;
+  }
+  }
+
+  &__h3 {
+    text-transform: uppercase;
+    color: $yellow;
+    margin-bottom: 13px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: $white;
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    min-width: 220px;
+
+  }
+}
+
+
+.whybuy {
+
+  background-color: $black;
+
+  .container {
+    //position: relative;
+
+    //&::before{
+    //  position: absolute;
+    //  content: '';
+    //  width: 445px;
+    //  height: 400px;
+    //  right: 20px;
+    //  top: 0;
+    //  background-repeat: no-repeat;
+    //  -webkit-background-size: contain;
+    //  background-size: contain;
+    //  background-image: url('../images/block2monn.png');
+    //}
+  }
+
+  &__flex {
+    display: flex;
+    flex-direction: row;
+    @include media_interval(0, $media1024) {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    margin-top: -18px;
+    //max-width: 426px;
+    width: 100%;
+    max-width: 426px;
+    position: relative;
+    overflow: hidden;
+    @include media_interval(0, $media1024) {
+      margin-top: 10px;
+      align-self: center;
+    }
+
+    &::before {
+      display: block;
+      padding-bottom: 90%;
+      content: '';
+    }
+
+    img {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__h3 {
+
+  }
+
+  &__h2 {
+    margin-bottom: 50px;
+  }
+
+  &__p {
+    @include column(0, 9, 11, 12);
+    margin-bottom: 15px;
+  }
+
+  padding-bottom: 184px;
+}

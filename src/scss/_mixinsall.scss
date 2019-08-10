@@ -1,0 +1,114 @@
+@import 'mixinsall/all';
+
+//@import 'conf';
+$media900: 900px;
+//=========================================
+//  Размеры шрифта
+//=========================================
+
+
+
+@mixin fontsize_h1() {
+  @include font-size(84px, 90px);
+  @include media_interval(0, $media900) {
+    @include font-size(40px, 45px);
+  }
+}
+
+@mixin fontsize_inner_page_h1() {
+  @include font-size(45px, 50px);
+  @include media_interval(0, $media900) {
+    @include font-size(35px, 40px);
+  }
+}
+
+@mixin fontsize_h2() {
+  @include font-size(42px, 54px);
+  @include media_interval(0, $media900) {
+    @include font-size(23px, 28px);
+  }
+}
+
+@mixin fontsize_h3() {
+  @include font-size(24px, 31px);
+  @include media_interval(0, $media900) {
+    @include font-size(18px, 26px);
+  }
+}
+
+@mixin fontsize_h4() {
+  @include font-size(30px, 39px);
+  @include media_interval(0, $media900) {
+    @include font-size(17px, 25px);
+  }
+}
+
+@mixin fontsize_h5() {
+  @include font-size(18px, 26px);
+  @include media_interval(0, $media900) {
+    @include font-size(17px, 25px);
+  }
+}
+
+@mixin fontsize_h6() {
+  @include font-size(17px, 25px);
+  @include media_interval(0, $media900) {
+    @include font-size(15px, 23px);
+  }
+}
+
+@mixin fontsize_default() {
+  @include font-size(21px, 27px);
+  @include media_interval(0, $media768) {
+    @include font-size(18px, 23px);
+  }
+}
+
+@mixin decorative_parts_fontsize() {
+  @include font-size(26px, 47px);
+  @include media_interval(0, $media900){
+    @include font-size(20px, 41px);
+  }
+}
+
+@mixin fontsize_text_small() {
+  @include font-size(14px, 17px);
+}
+
+@mixin fontsize_text_tiny() {
+  @include font-size(12px, 22px);
+}
+@mixin fontmobil_menu() {
+  @include font-size(46px, 65px);
+  @include media_interval(0, $media560) {
+    @include font-size(25px, 32px);
+  }
+}
+
+
+//=========================================
+//  Шрифты
+//=========================================
+@mixin font_default() {
+  font-family: 'roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+@mixin font_default_bold() {
+  font-family: 'roboto bold', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+@mixin font_gilroy_heavy() {
+  font-family: 'gilroy', sans-serif;
+  font-weight: normal;
+  font-style: italic;
+}
+
+@mixin font_gilroy_extra() {
+  font-family: 'gilroy', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+

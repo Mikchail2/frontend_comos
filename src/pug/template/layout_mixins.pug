@@ -1,0 +1,28 @@
+include variable
+mixin header(phope)
+	header.header
+
+			.header__logo
+				a(href="#")
+					img(src="../images/Moonlogo.svg" alt="")
+			+menu(menu,'-header')
+			.contacts-block.header__contacts
+				.contacts-block__button.header__contacts-button contact earth
+				.contacts-block__phone.header__contacts-phone +1 234 567-89-00
+			.menu-box
+				.mobile-menu-button
+					.burger
+mixin footer()
+	footer.footer
+			.footer__logo
+				a(href="#")
+					img(src="../images/Moonlogo.svg" alt="")
+			+menu(menu,'-footer')
+			.footer__policy
+				.footer__policy-button Use of terms
+				.footer__policy-phone Private policy
+			.contacts-block.footer__contacts
+				.contacts-block__button.footer__contacts-button contact earth
+				.contacts-block__phone.footer__contacts-phone +1 234 567-89-00
+
+
