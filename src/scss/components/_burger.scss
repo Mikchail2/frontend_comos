@@ -1,5 +1,5 @@
-@import 'mixins';
-@import 'mixinsall';
+@import '../mixins';
+@import '../mixinsall';
 
 .menu-box {
   @include media_interval(0, $media960) {

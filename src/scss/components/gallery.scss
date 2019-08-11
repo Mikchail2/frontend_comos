@@ -1,0 +1,102 @@
+.gallery {
+  background-image: url("../images/bg_gallery.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  padding-bottom: 450px;
+  position: relative;
+  mix-blend-mode: luminosity;
+
+   &::before {
+
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, .2) 100%);
+
+  }
+  &__h3 {
+    padding-top: 60px;
+  }
+  &__h2{
+    margin-bottom: 50px;
+  }
+  &__flex {
+    display: flex;
+
+  }
+
+  &__slider {
+    position: relative;
+    margin-left: -$padding_container;
+  }
+
+  &__img1 {
+    width: 677px;
+    height: 434px;
+    overflow: hidden;
+    //img {
+    //  @include centrizeImage($minSize: 100.5%);
+    //}
+    img {
+      //
+      height: 100%;
+      width: 100%;
+    }
+
+    //&::before {
+    //  display: block;
+    //  content: '';
+    //  padding-bottom: 50%;
+    //}
+  }
+
+  &__bg-yellow {
+    position: absolute;
+
+  }
+
+  &__img2 {
+    width: 413px;
+    height: 502px;
+    position: absolute;
+    top: 55px;
+    right: calc(-100% / 12 * 1 - 30px);
+
+    &::before {
+      height: 100%;
+      width: 100%;
+      content: '';
+      position: absolute;
+      background-color: $yellow;
+      z-index: 1;
+      top: -25px;
+      right: -25px;
+    }
+
+    img {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+    }
+
+    &::before {
+
+    }
+  }
+
+  &__text {
+    @include left_desktop(2);
+    @include column(0, 5, 7, 12)
+  }
+
+  &__h4 {
+    margin-bottom: 15px;
+  }
+
+  &__description {
+    margin-bottom: 15px;
+  }
+}

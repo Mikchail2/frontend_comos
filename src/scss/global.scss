@@ -2,10 +2,13 @@
 @import "settings";
 @import "layout";
 @import "fonts/stem/stylesheet.css";
-@import "menu";
-@import "burger";
-@import "hero";
-@import "button";
+@import "components/menu";
+@import "components/burger";
+@import "components/hero_whybuy";
+@import "components/button";
+@import "components/price";
+@import "components/gallery";
+@import "components/contact";
 
 
 .title__h1 {
@@ -31,6 +34,12 @@
   text-transform: uppercase;
   @include fontsize_h3();
 
+}
+
+.title__h4 {
+  @include fontsize_h3();
+  color: $white;
+  font-weight: bold;
 }
 
 .description {

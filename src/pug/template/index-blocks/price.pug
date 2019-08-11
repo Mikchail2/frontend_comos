@@ -1,0 +1,39 @@
+block var
+-
+	var
+	price_list= [
+	{
+		'desc':'Moon land with many craters. Protected from direct sunlight.',
+		'title': 'Relief land',
+		'cost': `$ <i>29</i> per acre`,
+		'src':'./images/img_1.png',
+		'button': 'buy land'
+	},
+	{
+		'desc':'Moon land with smooth ground. Suitable for houses and stations.',
+		'title': 'Smooth land',
+		'cost': `$ <i>39</i> per acre`,
+		'src':'./images/img_2.png',
+		'button': 'buy land'
+	},
+	{
+		'desc':'Moon land with smooth ground. Suitable for houses and stations.',
+		'title': 'Half-relief land',
+		'cost': `$ <i>49</i> per acre`,
+		'src':'./images/img_3.png',
+		'button': 'buy land'
+	},
+	]
+section.price
+	.container
+		.title__h3.price__h3 you can make a choice
+		.title__h2.price__h2 where to live in the future
+		ul.price__list
+			each item in price_list
+				li.price__item
+					.price__img
+						img(src= item.src alt="")
+					.price__cost !{item.cost}
+					.title__h4.price__title= item.title
+					.description.price__desc= item.desc
+					.button.button--yellow.price__button= item.button

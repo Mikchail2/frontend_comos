@@ -1,4 +1,4 @@
-@import 'mixins';
+@import '../mixins';
 
 .hero {
   position: relative;
@@ -25,10 +25,10 @@
   }
 
   &__wrapper {
-    @include column(0, 4.5, 7, 7);
+    @include column(0, 4.5, 5.5, 7);
     padding-bottom: 256px;
-@include media_interval(0, $media640) {
-   padding-bottom: 90px;
+    @include media_interval(0, $media640) {
+    padding-bottom: 90px;
   }
   }
 

@@ -1,0 +1,30 @@
+.button {
+  display: block;
+  cursor: pointer;
+  color: $white;
+  width: 100%;
+  max-width: 250px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 21px 47px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  transition: background-color 0.2s linear;
+
+  span {
+    @include font-size(18px, 23px)
+  }
+
+  &--yellow {
+    background-color: $yellow;
+    color: $black;
+
+    &:hover {
+      background-color: lighten($yellow, 20%);
+    }
+  }
+
+  &--hover{
+    background-color: lighten($black, 80%);
+  }
+}

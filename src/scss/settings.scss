@@ -51,7 +51,7 @@ main {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font: 16px/20px 'Stem-Medium', sans-serif;
+  font: 16px/20px 'Stem-Regular', sans-serif;
 }
 
 ul, ol, li {
@@ -66,6 +66,7 @@ a {
   width: 100%;
   margin: 0 auto;
   max-width: 1400px;
+  position: relative;
   background-clip: content-box;
   box-sizing: border-box;
   padding-left: $padding_container;

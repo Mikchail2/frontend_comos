@@ -1,0 +1,120 @@
+.price {
+  background-image: url("../images/wp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  padding-bottom: 150px;
+  position: relative;
+
+  @include media_interval(0,$media560){
+    padding-bottom: 50px;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, .5) 100%);
+
+  }
+
+  .container {
+
+  }
+
+  &__list {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    margin: 0 -15px;
+    padding-top: 100px;
+    align-content: start;
+    @include media_interval(0, $media900) {
+      flex-wrap: wrap;
+    }
+
+    @include media_interval(0, $media640) {
+      padding-top: 40px;
+    }
+  }
+
+  &__item {
+    width: calc(33.33% - 30px);
+    margin: 0 15px;
+    padding: 0 calc(100% / 12 * 1 - 30px);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    //border-right: solid 1px $white;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: 100%;
+      width: 2px;
+      background-color: $white;
+      right: -15px;
+      top: 0;
+    }
+
+
+    &:last-child {
+      &::before {
+        display: none;
+      }
+
+      border: none;
+    }
+
+    @include media_interval(0, $media1200) {
+      padding: 0 calc(100% / 12 * 1 - 80px);
+    }
+    @include media_interval(0, $media900) {
+      width: calc(50% - 30px);
+      margin-bottom: 30px;
+      &::before {
+        display: none;
+      }
+    }
+    @include media_interval(0, $media640) {
+      width: calc(100% - 30px);
+    }
+  }
+
+  &__cost {
+    color: $yellow;
+    @include fontsize_default;
+  }
+
+  &__title {
+    color: $white;
+    @include font-size(30px, 39px);
+    margin-bottom: 17px;
+
+  }
+
+  &__desc {
+    margin-bottom: 34px;
+  }
+
+  &__button {
+    margin-top: auto;
+  }
+
+  i {
+    @include font-size(30px, 39px);
+  }
+
+  &__img {
+
+    img {
+      border: solid 2px $yellow;
+      border-radius: 50%;
+      padding: 10px;
+    }
+  }
+}

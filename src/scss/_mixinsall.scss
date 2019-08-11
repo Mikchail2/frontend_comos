@@ -10,7 +10,7 @@ $media900: 900px;
 
 @mixin fontsize_h1() {
   @include font-size(84px, 90px);
-  @include media_interval(0, $media900) {
+  @include media_interval(0, $media1024) {
     @include font-size(40px, 45px);
   }
 }
@@ -37,9 +37,9 @@ $media900: 900px;
 }
 
 @mixin fontsize_h4() {
-  @include font-size(30px, 39px);
+  @include font-size(24px, 24px);
   @include media_interval(0, $media900) {
-    @include font-size(17px, 25px);
+    @include font-size(18px, 26px);
   }
 }
 

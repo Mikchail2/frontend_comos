@@ -1,7 +1,7 @@
 doctype
 include variable
 include mixins
-include layout_mixins
+include header-footer
 
 html(lang="ru")
 	head
@@ -14,8 +14,8 @@ html(lang="ru")
 		link(rel="styleSheet", media="all", type="text/css", href="css/style.min.css")
 
 	body
-		+menu-mobil(menu)
 		block var
+		+menu-mobil(menu)
 
 		+header()
 

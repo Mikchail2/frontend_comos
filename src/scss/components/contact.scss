@@ -1,0 +1,84 @@
+.contacts {
+  background-color: $bg_contact;
+
+
+  &__form {
+    padding-bottom: 100px;
+
+  }
+
+  &__h3 {
+    padding-top: 60px;
+  }
+
+  &__h2 {
+    margin-bottom: 60px;
+  }
+}
+
+.form {
+  display: flex;
+  //justify-content: space-between;
+  //align-content: space-evenly;
+
+  @include media_interval(0, $media1200) {
+    flex-wrap: wrap;
+    margin-bottom: -15px;
+    margin-right: -25px;
+  }
+  @include media_interval(0, $media560) {
+      width: 100%;
+      margin-right: 0;
+    }
+
+  &__input {
+    width: 25%;
+    margin-right: 25px;
+    @include font-size(18px, 23px);
+    background-color: transparent;
+    border: solid 1px $white;
+    padding: 25px;
+    color: $white;
+
+    &::placeholder {
+      @include font-size(18px, 23px);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+
+    }
+
+    @include media_interval(0, $media1200) {
+      width: calc(50% - 25px);
+      margin-bottom: 15px;
+    }
+     @include media_interval(0, $media560) {
+      width: 100%;
+       margin-right: 0;
+    }
+  }
+
+  &__button {
+    width: 25%;
+    padding: 25px;
+    border: solid 1px $yellow;
+    color: $yellow;
+    //height: 100%;
+    max-width: initial;
+
+    @include font-size(18px, 23px);
+    //align-content: ;
+    background-color: transparent;
+    @include media_interval(0, $media1200) {
+      width: calc(50% - 25px);
+      margin-right: 25px;
+      margin-bottom: 15px;
+    }
+     @include media_interval(0, $media560) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+}

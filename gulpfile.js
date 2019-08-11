@@ -71,8 +71,8 @@ gulp.task('css', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('src/scss/*.scss', ['scss']);
-  gulp.watch('src/pug/*.pug', ['pug']);
+  gulp.watch('src/scss/**/*.scss', ['scss']);
+  gulp.watch('src/pug/**/*.pug', ['pug']);
   gulp.watch('src/pug/template/*.pug', ['pug']);
   gulp.watch('build/*.html', ['html']);
   gulp.watch('build/css/*.css', ['css']);
