@@ -1,0 +1,33 @@
+block var
+-
+	var
+	statistics= [
+	{
+	'count':'3429',
+	'desc': 'moon acres sold',
+
+	},
+	{
+	'count':'1457',
+	'desc': 'man became a lunar land owners',
+
+	},
+	{
+	'count':'12',
+	'desc': 'lunar stations built',
+
+	},
+	{
+	'count':'6788',
+	'desc': 'acres preparing for sell',
+
+	},
+	]
+section.statistics
+	.container
+
+		ul.statistics__list
+			each item in statistics
+				li.statistics__item
+					.statistics__count= item.count
+					.description.statistics__desc= item.desc

@@ -30,6 +30,13 @@ $menu-burger-active-color: #FF7010;
 $menu_burger_width: 30px;
 $menu_burger_line_height: 2px;
 $menu_burger_line_space: 10px;
+// background footer
+.wrapper-moon{
+  background-image: linear-gradient(180deg, #000000 18.23%, rgba(0, 0, 0, 0) 100%),url('../images/moon-stars-space.jpg');
+  background-size: cover ;
+  background-repeat: no-repeat,no-repeat;
+  background-position: 0 0,center;
+}
 
 
 

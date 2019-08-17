@@ -15,8 +15,8 @@ $media900: 900px;
   }
 }
 
-@mixin fontsize_inner_page_h1() {
-  @include font-size(45px, 50px);
+@mixin fontsize_count() {
+  @include font-size(48px,50px);
   @include media_interval(0, $media900) {
     @include font-size(35px, 40px);
   }

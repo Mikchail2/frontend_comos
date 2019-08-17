@@ -1,0 +1,34 @@
+.statistics{
+  padding-bottom: 85px;
+  padding-top: 42px;
+  &__list{
+    display: flex;
+    flex-wrap:wrap;
+    margin: 0 -15px;
+     @include media_interval(0,$media1024){
+       margin-bottom: -25px;
+       align-items: center;
+       text-align: center;
+    }
+  }
+  &__item{
+    padding: 0 15px;
+    flex: 1 0 25%;
+    @include media_interval(0,$media1024){
+      flex: 1 0 50%;
+      padding-bottom: 25px;
+    }
+  }
+
+  &__count{
+    color: $yellow;
+    @include fontsize_count;
+  }
+  &__desc{
+    width: 215px;
+     @include media_interval(0,$media1024){
+       text-align: center;
+       width: auto;
+    }
+  }
+}

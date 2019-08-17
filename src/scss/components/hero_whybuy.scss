@@ -14,6 +14,19 @@
     background-position: -295px 0;
   }
 
+  &::after {
+    position: absolute;
+    content: '';
+    background-image: url("../images/pluses.png");
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    left: 0;
+    top: 0;
+  }
+
   &::before {
     position: absolute;
     content: '';
@@ -24,12 +37,25 @@
     left: 0;
   }
 
+  //  %craft {
+  //  background: url("../images/plus.png")repeat;
+  //  width: 27px; height: 31px;
+  //  display: inline-block;
+  //  margin-right: 10px;
+  //}
+  //@for $i from 0 through 2 {
+  //  .craft#{$i} {
+  //    @extend %craft;
+  //    $length: -31px*$i;
+  //    background-position: 0 $length;
+  //  }
+  //}
   &__wrapper {
     @include column(0, 4.5, 5.5, 7);
     padding-bottom: 256px;
     @include media_interval(0, $media640) {
-    padding-bottom: 90px;
-  }
+      padding-bottom: 90px;
+    }
   }
 
   &__h3 {

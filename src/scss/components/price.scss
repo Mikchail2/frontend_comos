@@ -87,7 +87,8 @@
 
   &__cost {
     color: $yellow;
-    @include fontsize_default;
+     @include font-size(30px, 39px);
+    //@include fontsize_default;
   }
 
   &__title {
@@ -103,10 +104,15 @@
 
   &__button {
     margin-top: auto;
+    letter-spacing: 0.2em;
+    padding: 17px;
+    border: none ;
+    @include font-size(18px,23px);
   }
 
   i {
-    @include font-size(30px, 39px);
+    @include font-size(45px, 39px);
+    font-weight: bold;
   }
 
   &__img {

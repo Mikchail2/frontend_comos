@@ -1,0 +1,82 @@
+.joinform {
+  text-align: center;
+  padding-bottom: 258px;
+
+  &__title {
+    margin-bottom: 67px;
+  }
+
+  &__label {
+    position: relative;
+    max-width: 850px;
+    width: 100%;
+    border-bottom: 1px solid $white;
+    margin-bottom: 47px;
+
+    &::after {
+      width: 0;
+      content: "";
+      position: absolute;
+      height: 1px;
+      bottom: -1px;
+      left: 48%;
+      background-color: $yellow;
+      transition: all .4s;
+    }
+
+
+  }
+
+  &__wr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    input {
+      background-color: transparent;
+      outline: none;
+      color: $white;
+
+      max-width: 850px;
+      width: 100%;
+      border: none;
+
+      padding: 11px 0;
+      position: relative;
+
+
+      &::placeholder {
+        display: inline-block;
+        padding-bottom: 11px;
+        color: $white;
+        @include font-size(21px, 27px);
+      }
+
+      &:focus + .joinform__label {
+
+        &::after {
+          width: 100%;
+          left: 0;
+
+        }
+      }
+      &:focus {
+        &::placeholder {
+          font-size: 0;
+        }
+      }
+
+  }
+}
+
+&__button {
+  border-color: $yellow;
+  color: $yellow;
+  max-width: 340px;
+  padding: 25px 45px;
+  font-weight: 200px;
+  letter-spacing: 0.2em;
+}
+
+}

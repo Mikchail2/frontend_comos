@@ -27,9 +27,9 @@
     margin-right: -25px;
   }
   @include media_interval(0, $media560) {
-      width: 100%;
-      margin-right: 0;
-    }
+    width: 100%;
+    margin-right: 0;
+  }
 
   &__input {
     width: 25%;
@@ -44,6 +44,12 @@
       @include font-size(18px, 23px);
     }
 
+    &:focus {
+      &::placeholder {
+        font-size: 0;
+      }
+    }
+
     &:last-child {
       margin-bottom: 0;
 
@@ -53,9 +59,9 @@
       width: calc(50% - 25px);
       margin-bottom: 15px;
     }
-     @include media_interval(0, $media560) {
+    @include media_interval(0, $media560) {
       width: 100%;
-       margin-right: 0;
+      margin-right: 0;
     }
   }
 
@@ -64,18 +70,17 @@
     padding: 25px;
     border: solid 1px $yellow;
     color: $yellow;
-    //height: 100%;
+    letter-spacing: 0.2em;
     max-width: initial;
-
     @include font-size(18px, 23px);
-    //align-content: ;
     background-color: transparent;
+
     @include media_interval(0, $media1200) {
       width: calc(50% - 25px);
       margin-right: 25px;
       margin-bottom: 15px;
     }
-     @include media_interval(0, $media560) {
+    @include media_interval(0, $media560) {
       width: 100%;
       margin-right: 0;
       margin-bottom: 0;
