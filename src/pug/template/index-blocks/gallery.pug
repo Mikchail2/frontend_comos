@@ -12,9 +12,24 @@ section.gallery
 			.gallery__slider
 				.gallery__img1
 					img(src="./images/slider.jpg" alt="")
-				.gallery__img2
+					.gallery__navigation
+						.gallery__navigation-prev
+						.gallery__navigation-next
+				.gallery__img2.swiper-container
 					.gallery__bg-yellow
-					img(src="./images/slidermain.jpg" alt="")
+					.swiper-wrapper
+						img.swiper-slide(src="./images/slidermain.jpg" alt="")
+						img.swiper-slide(src="./images/slidermain.jpg" alt="")
+						img.swiper-slide(src="./images/moon-stars-space.jpg" alt="")
+
+					//.swiper-slide.gallery__slider
+					//	.gallery__img1
+					//		img(src="./images/slider.jpg" alt="")
+					//	.gallery__img2
+					//		.gallery__bg-yellow
+					//		img(src="./images/slidermain.jpg" alt="")
+
+
 			.gallery__text
 				h4.title__h4.gallery__h4 Let’s imagine, what a life on the Moon could be
 				p.description.gallery__description= desc
