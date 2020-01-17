@@ -103,12 +103,34 @@
   }
 
   &__button {
+    position: relative;
     margin-top: auto;
     letter-spacing: 0.2em;
     padding: 17px;
     border: none ;
     @include font-size(18px,23px);
+    &::before{
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 100%;
+      background-color: $white;
+      top: 0;
+      left: 50%;
+      transition: all 0.2s ease;
+    }
+  
+    span{
+      position: relative;
+    }
+    &:hover{
+      background-color: rgba($white,0);
+      &::before{
+        left: 0;
+        width: 100%;
+      }
   }
+}
 
   i {
     @include font-size(45px, 39px);

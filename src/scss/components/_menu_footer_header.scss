@@ -177,9 +177,9 @@
     a {
       @include font-size(14px, 18px);
       color: $white;
-
+      transition: color 0.5s ease;
       &:hover {
-        color: darken($white, 10%);
+        color: $yellow;
       }
     }
   }

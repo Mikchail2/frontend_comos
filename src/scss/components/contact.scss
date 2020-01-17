@@ -74,7 +74,10 @@
     max-width: initial;
     @include font-size(18px, 23px);
     background-color: transparent;
-
+    &:hover{
+      background-color: $yellow;
+      color: $black;
+    }
     @include media_interval(0, $media1200) {
       width: calc(50% - 25px);
       margin-right: 25px;

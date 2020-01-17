@@ -12,7 +12,7 @@
 @import "components/statistics";
 @import "components/joinform";
 
-
+@import "node_modules/aos/src/sass/aos.scss";
 .title__h1 {
   @include fontsize_h1();
 

@@ -46,7 +46,6 @@
         if (isFullyVisible(statistics)) {
             if (flag) {
                 arrFunc.forEach(item => {
-                    console.log(item)
                     item()
                 })
             }
@@ -92,19 +91,6 @@
         })
     }
 
-// animate({
-    //     duration: 4000,
-    //     timing(timeFraction) {
-    //         return timeFraction;
-    //     },
-    //     draw(progress) {
-    //         var count = 0;
-    //         var step = countArr / 30;
-    //         count += step;
-    //         item.innerHTML = parseInt(count);
-    //         // elem.style.width = progress * 100 + '%';
-    //     }
-    // });
 
     function isFullyVisible(el) {
         var elementBoundary = el.getBoundingClientRect();
@@ -114,4 +100,7 @@
 
         return ((top >= 0) && (bottom <= window.innerHeight));
     }
+    console.log(AOS);
+    
+    AOS.init();
 })();

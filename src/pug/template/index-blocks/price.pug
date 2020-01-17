@@ -26,8 +26,8 @@ block var
 	]
 section.price
 	.container
-		.title__h3.price__h3 you can make a choice
-		.title__h2.price__h2 where to live in the future
+		.title__h3.price__h3(data-aos="fade-up" data-aos-delay="150") you can make a choice
+		.title__h2.price__h2(data-aos="fade-up" data-aos-delay="150") where to live in the future
 		ul.price__list
 			each item in price_list
 				li.price__item
@@ -36,4 +36,5 @@ section.price
 					.price__cost !{item.cost}
 					.title__h4.price__title= item.title
 					.description.price__desc= item.desc
-					.button.button--yellow.price__button= item.button
+					.button.button--yellow.price__button
+						span= item.button

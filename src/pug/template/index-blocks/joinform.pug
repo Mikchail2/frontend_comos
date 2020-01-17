@@ -2,10 +2,12 @@ section.joinform
 	.container
 		h3.title__h3.joinform__h3 want to see more?
 		h1.title__h2.joinform__title join our moon community
-		form.joinform__form
+		form.joinform__form()
 			.joinform__wr
 
-				input(type='email' placeholder="Enter your e-mail")
-				label.joinform__label
-				button.button.joinform__button become a member
+				input(type='email' placeholder="Enter your e-mail" data-aos="fade-up")
+				label.joinform__label(data-aos="fade-up")
+				.wr-button(data-aos="fade" data-aos-delay="450")
+					button.button.joinform__button
+						span become a member
 

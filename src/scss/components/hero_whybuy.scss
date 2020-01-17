@@ -25,6 +25,7 @@
     background-position: 0 0;
     left: 0;
     top: 0;
+    pointer-events: none;
   }
 
   &::before {
@@ -72,8 +73,12 @@
 
   &__button {
     min-width: 220px;
-
-  }
+    &:hover{
+      background-color: $yellow;
+      border-color: transparent;
+      color: $black;
+    }
+  } 
 }
 
 
